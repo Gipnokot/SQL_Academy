@@ -27,8 +27,14 @@ WHERE plane = 'TU-154'
 
 -- Какие компании совершали перелеты на Boeing
 
-SELECT distinct name
+SELECT DISTINCT name
 FROM Trip
 INNER JOIN Company
     ON Trip.company = Company.id
     WHERE plane = "Boeing"
+
+-- Вывести все названия самолётов, на которых можно улететь в Москву (Moscow)
+
+SELECT DISTINCT plane
+FROM Trip
+WHERE town_to = "Moscow"
