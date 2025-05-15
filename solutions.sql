@@ -27,3 +27,8 @@ WHERE plane = 'TU-154'
 
 -- Какие компании совершали перелеты на Boeing
 
+SELECT distinct name
+FROM Trip
+INNER JOIN Company
+    ON Trip.company = Company.id
+    WHERE plane = "Boeing"
