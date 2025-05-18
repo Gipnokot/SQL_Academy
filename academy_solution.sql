@@ -61,4 +61,6 @@ SELECT id, address FROM Rooms
 WHERE address REGEXP '\\bAvenue\\b';
 
 -- Выведите name, email пользователей, чей адрес электронной почты заканчивается на «@outlook.com» или «@live.com».
-
+SELECT name, email
+FROM USERS
+WHERE email REGEXP '@(outlook\\.com|live\\.com)$';
